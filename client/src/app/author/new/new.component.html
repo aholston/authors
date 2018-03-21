@@ -1,0 +1,15 @@
+<h2 class='text-primary'>Add an Author!</h2>
+
+<form (submit)='createAuthor()'>
+  <div class="form-group">
+    <label for="first_name">First name:</label>
+    <input type="text" class="form-control" id="first_name" name='newAuthor.first_name' [(ngModel)]='newAuthor.first_name' placeholder="Enter Authors First Name">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input type="text" class="form-control" id="last_name" name='newAuthor.last_name' [(ngModel)]='newAuthor.last_name' placeholder="Enter Authors Last Name">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<p class='text-danger'>{{error}}</p>

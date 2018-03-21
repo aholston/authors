@@ -1,0 +1,16 @@
+
+<h2 class='text-primary'>Edit Author!</h2>
+
+<form (submit)='editAuthor(currentAuthor._id, currentAuthor)'>
+  <div class="form-group">
+    <label for="first_name">First name:</label>
+    <input type="text" class="form-control" id="first_name" name='currentAuthor.first_name' [(ngModel)]='currentAuthor.first_name' placeholder="Enter Authors First Name" value='currentAuthor.first_name'>
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input type="text" class="form-control" id="last_name" name='currentAuthor.last_name' [(ngModel)]='currentAuthor.last_name' placeholder="Enter Authors Last Name" value='currentAuthor.last_name'>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<p class='text-danger'>{{error}}</p>

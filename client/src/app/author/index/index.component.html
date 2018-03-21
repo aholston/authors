@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Author</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let author of authors'>
+      <td>
+        {{ author.first_name }} {{ author.last_name }}
+      </td>
+      <td>
+        <button class='btn-primary' [routerLink]="['/author', 'edit', author._id]">Edit</button>
+        <button class='btn-primary' (click)='deleteAuthor(author._id)'>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
